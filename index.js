@@ -7,7 +7,13 @@ const userProfileRoutes = require("./routes/userProfileRoutes");
 dotenv.config(); // Load environment variables from a file
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: ["chapaibackend.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true,
+  })
+);
 
 const MONGODB_URI = process.env.MONGODB_URI;
 const PORT = process.env.PORT || 5001;
