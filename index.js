@@ -9,7 +9,7 @@ dotenv.config(); // Load environment variables from a file
 const app = express();
 app.use(
   cors({
-    origin: ["https://www.chapaibar.com/"],
+    origin: ["https://chapaibar.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true,
   })
